@@ -1,9 +1,14 @@
 import styled from "styled-components"
 
 export const ContactContainer = styled.div`
-  margin: 5% 30%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 7% 0;
+  width: 620px;
 
   p {
+    font-weight: 600;
     margin-bottom: 30px;
     font-size: 1.2rem;
   }
@@ -19,23 +24,27 @@ export const FormLabel = styled.label`
 `
 
 export const FormInputContainer = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-gap: 10px;
 `
 
 export const InputGroup = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px 0;
 `
 
 export const FormInput = styled.input`
   font-family: 'Roboto Mono', monospace;
   padding: 10px 0 10px 5px;
-  margin-right: 30px;
   border-radius: 5px;
   border: none;
   box-shadow: 1px 1px 5px #c9c9c9;
+
+  &:focus-visible {
+    box-shadow: 1px 1px 5px gray;
+    outline: none;
+  }
 `
 
 export const FormTextAreaContainer = styled.div`
@@ -50,6 +59,11 @@ export const FormTextArea = styled.textarea`
   border-radius: 5px;
   border: none;
   box-shadow: 1px 1px 5px #c9c9c9;
+
+  &:focus-visible {
+    box-shadow: 1px 1px 5px gray;
+    outline: none;
+  }
 `
 
 export const FormButtonContainer = styled.div`

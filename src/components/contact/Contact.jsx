@@ -11,17 +11,17 @@ const Contact = () => {
             <FormInput placeholder="your name..." />
           </InputGroup>
           <InputGroup>
-            <FormLabel>phone</FormLabel>
-            <FormInput placeholder="your phone number..." />
+            <FormLabel>email</FormLabel>
+            <FormInput type='email' placeholder="your email..." />
           </InputGroup>
           <InputGroup>
-            <FormLabel>email</FormLabel>
-            <FormInput placeholder="your email..." />
+            <FormLabel>phone</FormLabel>
+            <FormInput type='tel' placeholder="your phone number..." />
           </InputGroup>
         </FormInputContainer>
         <FormTextAreaContainer>
           <FormLabel>message</FormLabel>
-          <FormTextArea placeholder="what can i do for you?" rows='7'/>
+          <FormTextArea placeholder="what can i do for you?" rows='8'/>
           <FormButtonContainer>
             <button type='submit'>submit</button>
           </FormButtonContainer>
