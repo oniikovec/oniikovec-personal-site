@@ -1,7 +1,7 @@
 import { SkillsContainer, Skill } from './Skills.styles'
 import { DiReact, DiNodejsSmall, DiPostgresql } from 'react-icons/di'
 import { IoLogoJavascript } from 'react-icons/io'
-import { SiStyledcomponents, SiMongodb, SiFirebase, SiMysql, SiExpress } from 'react-icons/si'
+import { SiStyledcomponents, SiMongodb, SiFirebase, SiMysql, SiExpress, SiGraphql } from 'react-icons/si'
 
 const Skills = () => {
 
@@ -27,6 +27,9 @@ const Skills = () => {
       </Skill>
       <Skill>
         <DiPostgresql />
+      </Skill>
+      <Skill>
+        <SiGraphql />
       </Skill>
       <Skill>
         <SiFirebase />

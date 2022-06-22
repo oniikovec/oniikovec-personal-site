@@ -4,7 +4,13 @@ export const SkillsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 50px 0;
+  padding: 4% 0;
+  border-top: 1px solid #c0c1c2;
+
+  @media screen and (max-width: 614px) {
+    display: grid;
+    grid-template-columns: repeat(5, 55px);
+  }
 `
 
 export const Skill = styled.span`

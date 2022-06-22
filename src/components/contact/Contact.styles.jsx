@@ -5,12 +5,16 @@ export const ContactContainer = styled.div`
   flex-direction: column;
   margin: 0 auto;
   padding: 7% 0;
-  width: 620px;
+  max-width: 620px;
 
   p {
     font-weight: 600;
     margin-bottom: 30px;
     font-size: 1.2rem;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 7% 3%;
+    min-width: 280px;
   }
 `
 
@@ -27,6 +31,11 @@ export const FormInputContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 200px);
   grid-gap: 10px;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const InputGroup = styled.div`

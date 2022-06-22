@@ -8,7 +8,7 @@ const Contact = () => {
         <FormInputContainer>
           <InputGroup>
             <FormLabel>name</FormLabel>
-            <FormInput placeholder="your name..." />
+            <FormInput type='text' placeholder="your name..." />
           </InputGroup>
           <InputGroup>
             <FormLabel>email</FormLabel>
