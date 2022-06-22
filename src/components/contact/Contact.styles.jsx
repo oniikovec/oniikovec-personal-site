@@ -45,7 +45,7 @@ export const InputGroup = styled.div`
 
 export const FormInput = styled.input`
   font-family: 'Roboto Mono', monospace;
-  padding: 10px 0 10px 5px;
+  padding: 10px 0 10px 10px;
   border-radius: 5px;
   border: none;
   box-shadow: 1px 1px 5px #c9c9c9;

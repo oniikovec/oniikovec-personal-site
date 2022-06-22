@@ -9,10 +9,6 @@ export const HeaderContainer = styled.div`
   align-items: center; 
   border-bottom: 1px solid #c0c1c2;
 
-  span {
-    color: #444444;
-    font-size: 2rem;
-  }
   h1 {
     font-size: 3.5rem;
     font-weight: 500;
@@ -22,7 +18,34 @@ export const HeaderContainer = styled.div`
     font-weight: 500;
     color: #444444;
   }
-`
+  span {
+    color: #444444;
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+    font-size: 8rem;
+    }
+    span {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+    font-size: 7rem;
+    }
+    span {
+      font-size: 1.2rem;
+    }
+  }
+  `
 
 export const ScrollDownHint = styled(motion.span)`
   position: absolute;
