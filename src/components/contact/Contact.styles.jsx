@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const ContactContainer = styled.div`
+export const ContactFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -18,7 +18,7 @@ export const ContactContainer = styled.div`
   }
 `
 
-export const ContactForm = styled.form`
+export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
 `
@@ -68,6 +68,7 @@ export const FormTextArea = styled.textarea`
   border-radius: 5px;
   border: none;
   box-shadow: 1px 1px 5px #c9c9c9;
+  resize: vertical;
 
   &:focus-visible {
     box-shadow: 1px 1px 5px gray;
