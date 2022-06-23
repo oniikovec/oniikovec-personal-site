@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 export const ContactFormContainer = styled.div`
   display: flex;
@@ -78,7 +79,7 @@ export const FormTextArea = styled.textarea`
 
 export const FormButtonContainer = styled.div`
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 
   button {
     font-family: 'Roboto Mono', monospace;
@@ -97,4 +98,11 @@ export const FormButtonContainer = styled.div`
       background-color: #636262;
     }
   }
+`
+
+export const MessageSent = styled(motion.h4)`
+  font-size: 1rem;
+  font-weight: 400;
+  color: #444444;
+  margin: 20px 0 0 10px;
 `

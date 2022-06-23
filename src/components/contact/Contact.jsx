@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { ContactFormContainer, FormContainer, FormLabel, FormInputContainer, InputGroup, FormInput, FormTextAreaContainer, FormTextArea, FormButtonContainer } from './Contact.styles'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
+import { ContactFormContainer, FormContainer, FormLabel, FormInputContainer, InputGroup, FormInput, FormTextAreaContainer, FormTextArea, FormButtonContainer, MessageSent } from './Contact.styles'
 
 
 // const FORM_ENDPOINT = 'https://public.herotofu.com/v1/0c05aba0-f226-11ec-8ed8-456386acdd98'
@@ -12,9 +13,10 @@ const DEFAULT_FORM_FIELDS = {
 
 const ContactForm = () => {
 
-  const [status, setStatus] = useState("submit");
+  const [sent, setSent] = useState(false)
   const [formFields, setFormFields] = useState(DEFAULT_FORM_FIELDS)
   const { name, email, tel, message } = formFields
+  const form = useRef()
   
   
   const handleChange = (event) => {
@@ -24,37 +26,28 @@ const ContactForm = () => {
     })
   }
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
-    setStatus('sending...')
-    const emailDetails = {
-      name: name,
-      email: email,
-      tel: tel,
-      message: message
-    }
-    const response = await fetch('http://localhost:3000/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': "application/json;charset=utf-8"
-      },
-      body: JSON.stringify(emailDetails)
-    })
-    setStatus('submit')
-    const result = await response.json()
-    alert(result.status)
+
+    emailjs.sendForm('service_1umrqgu', 'template_n3pcbng', form.current, '2PW5yOKV_onvBUtpP')
+      .then(() => {
+        setSent(true)
+      }, (error) => {
+        console.log(error.text);
+      })
     resetFormFields()
   }
   
   const resetFormFields = () => {
     setFormFields(DEFAULT_FORM_FIELDS)
+    setSent(false)
   }
 
 
   return (
     <ContactFormContainer>
       <p>have you seen some of my work that brought you here? feel free to get in touch.</p>
-      <FormContainer onSubmit={handleSubmit}>
+      <FormContainer ref={form} onSubmit={handleSubmit}>
         <FormInputContainer>
           <InputGroup>
             <FormLabel htmlFor='name'>name</FormLabel>
@@ -73,10 +66,16 @@ const ContactForm = () => {
           <FormLabel htmlFor='message'>message</FormLabel>
           <FormTextArea required placeholder="what can i do for you?" id='message' name='message' rows='8' value={message} onChange={handleChange} />
           <FormButtonContainer>
-            <button type='submit'>{status}</button>
+            <div>
+              {
+                sent && <MessageSent initial={{opacity: 1}} animate={{opacity: 0}} transition={{delay: 4, duration: 1}}>message sent, thank you.</MessageSent>
+              }
+            </div>
+            <button type='submit'>submit</button>
           </FormButtonContainer>
         </FormTextAreaContainer>
       </FormContainer>
+      
     </ContactFormContainer>
   )
 }
