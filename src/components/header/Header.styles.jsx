@@ -51,3 +51,7 @@ export const ScrollDownHint = styled(motion.span)`
   position: absolute;
   bottom: 0;
 `
+
+export const HeaderImage = styled(motion.img)`
+  width: 150px;
+`
