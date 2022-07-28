@@ -6,7 +6,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   border-bottom: 1px solid #c0c1c2;
 
   h1 {
@@ -28,7 +28,7 @@ export const HeaderContainer = styled.div`
       font-size: 3rem;
     }
     h2 {
-    font-size: 8rem;
+      font-size: 8rem;
     }
     span {
       font-size: 1.5rem;
@@ -39,19 +39,20 @@ export const HeaderContainer = styled.div`
       font-size: 2.5rem;
     }
     h2 {
-    font-size: 7rem;
+      font-size: 7rem;
     }
     span {
       font-size: 1.2rem;
     }
   }
-  `
+`;
 
 export const ScrollDownHint = styled(motion.span)`
   position: absolute;
   bottom: 0;
-`
+`;
 
 export const HeaderImage = styled(motion.img)`
-  width: 150px;
-`
+  width: 200px;
+  margin: 50px;
+`;

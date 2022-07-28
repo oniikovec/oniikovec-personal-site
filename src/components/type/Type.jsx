@@ -2,7 +2,7 @@ import TypeIt from "typeit-react";
 
 const typeit = (instance) => {
   instance
-    .pause(1000)
+    .pause(2000)
     .type("a developer.")
     .pause(2000)
     .move(-11)
@@ -10,7 +10,7 @@ const typeit = (instance) => {
     .type(" web")
     .pause(500)
     .move(11)
-    .pause(9000);
+    .pause(8000);
 
   return instance;
 };
