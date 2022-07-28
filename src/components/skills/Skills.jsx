@@ -1,17 +1,27 @@
-import { SkillsContainer, Skill } from './Skills.styles'
-import { DiReact, DiNodejsSmall, DiPostgresql } from 'react-icons/di'
-import { IoLogoJavascript } from 'react-icons/io'
-import { SiStyledcomponents, SiMongodb, SiFirebase, SiMysql, SiExpress, SiGraphql } from 'react-icons/si'
+import { SkillsContainer, Skill } from "./Skills.styles";
+import { DiReact, DiNodejsSmall, DiPostgresql } from "react-icons/di";
+import { IoLogoJavascript } from "react-icons/io";
+import {
+  SiStyledcomponents,
+  SiMongodb,
+  SiFirebase,
+  SiMysql,
+  SiExpress,
+  SiGraphql,
+} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 
 const Skills = () => {
-
   return (
     <SkillsContainer>
       <Skill>
         <IoLogoJavascript />
       </Skill>
       <Skill>
-        <DiReact /> 
+        <DiReact />
+      </Skill>
+      <Skill>
+        <TbBrandNextjs />
       </Skill>
       <Skill>
         <DiNodejsSmall />
@@ -19,25 +29,7 @@ const Skills = () => {
       <Skill>
         <SiExpress />
       </Skill>
-      <Skill>
-        <SiMongodb />
-      </Skill>
-      <Skill>
-        <SiMysql />
-      </Skill>
-      <Skill>
-        <DiPostgresql />
-      </Skill>
-      <Skill>
-        <SiGraphql />
-      </Skill>
-      <Skill>
-        <SiFirebase />
-      </Skill>
-      <Skill>
-        <SiStyledcomponents />
-      </Skill>
     </SkillsContainer>
-  )
-}
-export default Skills
+  );
+};
+export default Skills;

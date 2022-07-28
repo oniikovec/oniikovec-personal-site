@@ -1,7 +1,7 @@
-import headerImg from "../../assets/logo_dark-nobg.png";
 import Type from "../type/Type";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import { HeaderContainer, ScrollDownHint, HeaderImage } from "./Header.styles";
+import { HeaderContainer, ScrollDownHint, Logo } from "./Header.styles";
+import headerImg from "../../assets/logo_dark-nobg.png";
 
 const Header = () => {
   return (
@@ -13,7 +13,7 @@ const Header = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ type: "spring", duration: 2, bounce: 0.2 }}
       />
-      <h1>oniikovec</h1>
+      <h1>oni</h1>
       <Type />
       <ScrollDownHint
         initial={{ opacity: 1, y: -10 }}
