@@ -54,5 +54,4 @@ export const ScrollDownHint = styled(motion.span)`
 
 export const HeaderImage = styled(motion.img)`
   width: 200px;
-  margin: 50px;
 `;

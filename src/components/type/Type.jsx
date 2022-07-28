@@ -1,4 +1,5 @@
 import TypeIt from "typeit-react";
+import { TypeContainer } from "./Type.styles";
 
 const typeit = (instance) => {
   instance
@@ -17,7 +18,7 @@ const typeit = (instance) => {
 
 const Type = () => {
   return (
-    <div className="">
+    <TypeContainer>
       <TypeIt
         element="span"
         options={{
@@ -28,7 +29,7 @@ const Type = () => {
         }}
         getBeforeInit={typeit}
       />
-    </div>
+    </TypeContainer>
   );
 };
 
